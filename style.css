@@ -1,0 +1,124 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e0f7fa;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+header {
+    background-color: pink;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.gallery img {
+    max-width: 100%;
+    max-height: 400px;
+    /* Adjust as needed */
+    object-fit: cover;
+    /* Ensures the image covers the container */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.animations {
+    position: relative;
+    height: 200px;
+}
+
+.flower-animation {
+    width: 100%;
+    height: 100%;
+    background-image: url('flower.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: flowerAnimation 10s infinite;
+}
+
+@keyframes flowerAnimation {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+footer {
+    margin-top: 20px;
+}
+
+/* Rose Flower Styles */
+.rose {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+}
+
+.petal {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, #ffebee, #e57373);
+    border-radius: 50%;
+    transform: rotate(-45deg);
+}
+
+.petal-1 {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(0deg);
+}
+
+.petal-2 {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%) rotate(90deg);
+}
+
+.petal-3 {
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(180deg);
+}
+
+.petal-4 {
+    top: 0;
+    left: 0;
+    transform: rotate(-90deg);
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle, #f44336, #b71c1c);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
